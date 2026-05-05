@@ -1,0 +1,15 @@
+class Solution:
+    def tribonacci(self, n: int) -> int:
+        trib = [0,1,1]
+        if n < 3:
+            return trib[n]
+
+        for i in range(3, n + 1):
+            trib.append(trib[i - 3] + trib[i - 2] + trib[i - 1])
+        
+        return trib[-1]
+
+        # trib = [0,1,1,2,4,7]
+        # trib[n] = 1+2+4
+        # i    = 5
+        # n    = 5
